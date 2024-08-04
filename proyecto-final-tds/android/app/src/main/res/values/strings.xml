@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">proyecto-final-tds</string>
-    <string name="title_activity_main">proyecto-final-tds</string>
-    <string name="package_name">proyecto.final.tds</string>
-    <string name="custom_url_scheme">proyecto.final.tds</string>
-</resources>
