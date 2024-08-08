@@ -1,0 +1,11 @@
+include ':capacitor-android'
+project(':capacitor-android').projectDir = new File(rootProject.projectDir, '../node_modules/@capacitor/android')
+
+{
+  "appId" "com.example.app",
+  "appName": "MyApp",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
+
+
