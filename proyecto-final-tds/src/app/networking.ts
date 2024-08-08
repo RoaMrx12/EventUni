@@ -1,4 +1,4 @@
-// src/networking.ts
+
 
 interface User {
     id: string;
@@ -35,7 +35,7 @@ interface User {
       return connection;
     }
   
-    // Aceptar/rechazar solicitud
+   
     respondToConnectionRequest(connectionId: string, accept: boolean): Connection | null {
       const connection = this.connections.find(c => c.id === connectionId);
       if (connection) {
@@ -45,14 +45,14 @@ interface User {
       return null;
     }
   
-    // Ver lista de conexiones
+ 
     getUserConnections(userId: string): Connection[] {
       return this.connections.filter(c => 
         (c.user1Id === userId || c.user2Id === userId) && c.status === 'accepted'
       );
     }
   
-    // Método auxiliar para añadir usuarios (simulación)
+    
     addUser(user: User): void {
       this.users.push(user);
     }

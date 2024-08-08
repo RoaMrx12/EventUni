@@ -1,26 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <title>Ionic App</title>
-
-  <base href="/" />
-
-  <meta name="color-scheme" content="light dark" />
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="msapplication-tap-highlight" content="no" />
-
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
-
-  <!-- add to homescreen for ios -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Eventos Universitarios</title>
+  <link rel="stylesheet" href="global.scss"> 
 </head>
-
 <body>
-  <app-root></app-root>
-</body>
+  <div class="app-container">
+    <div class="tab-bar">
+      <div class="tab-button active" onclick="showTab('home')">Home</div>
+      <div class="tab-button" onclick="showTab('events')">Eventos</div>
+      <div class="tab-button" onclick="showTab('profile')">Perfil</div>
+    </div>
 
+    <div class="app-content" id="content">
+      <!-- Home Tab Content -->
+      <div id="home" class="tab-content">
+        <h2>Bienvenido a la Aplicación de Gestión de Eventos Universitarios</h2>
+        <p>Aquí podrás ver y gestionar todos los eventos universitarios.</p>
+      </div>
+
+      <!-- Eventos Tab Content -->
+      <div id="events" class="tab-content" style="display: none;">
+        <div class="event-item">
+          <div class="event-title">Evento 1</div>
+          <div class="event-details">
+            <div class="event-date">Fecha: 2024-08-15</div>
+            <div>Ubicación: Aula Magna</div>
+            <div>Descripción: Taller sobre desarrollo web.</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <div class="event-title">Evento 2</div>
+          <div class="event-details">
+            <div class="event-date">Fecha: 2024-08-20</div>
+            <div>Ubicación: Salón de Conferencias</div>
+            <div>Descripción: Conferencia sobre inteligencia artificial.</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <div class="event-title">Evento 3</div>
+          <div class="event-details">
+            <div class="event-date">Fecha: 2024-08-25</div>
+            <div>Ubicación: Biblioteca Central</div>
+            <div>Descripción: Sesión de estudio grupal.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Perfil Tab Content -->
+      <div id="profile" class="tab-content" style="display: none;">
+        <h2>Perfil del Usuario</h2>
+        <p>Aquí puedes ver y editar tu perfil.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      // Hide all tab contents
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.style.display = 'none';
+      });
+
+      // Remove active class from all tab buttons
+      document.querySelectorAll('.tab-button').forEach(button => {
+        button.classList.remove('active');
+      });
+
+      // Show the selected tab content
+      document.getElementById(tabId).style.display = 'block';
+
+      // Add active class to the clicked tab button
+      document.querySelector(`.tab-button[onclick*="${tabId}"]`).classList.add('active');
+    }
+  </script>
+</body>
 </html>

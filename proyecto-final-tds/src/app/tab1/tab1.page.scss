@@ -1,0 +1,52 @@
+
+
+ion-header {
+    --background: #0033a0; 
+    --color: white; 
+  }
+  
+  ion-toolbar {
+    --background: #0033a0; 
+    --color: white; 
+  }
+  
+  ion-title {
+    font-size: 1.2rem; 
+  }
+  
+  ion-content {
+    --background: white; 
+  }
+  
+  app-explore-container {
+    padding: 1rem; 
+  }
+  
+  ion-button {
+    --background: #c8102e; 
+    --color: white; 
+  }
+  
+  ion-card {
+    --background: #f0f0f0; 
+    --border-color: #0033a0; 
+  }
+  
+  ion-card-header {
+    --background: #0033a0; 
+    --color: white; 
+  }
+  
+  ion-card-content {
+    --color: #333; 
+  }
+  
+  ion-item {
+    --background: white; 
+    --color: #333; 
+  }
+  
+  ion-item ion-label {
+    color: #0033a0; 
+  }
+  

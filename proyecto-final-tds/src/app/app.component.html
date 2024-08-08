@@ -1,3 +1,42 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Eventos Universitarios</title>
+  <link rel="stylesheet" href="app.component.scss"> 
+</head>
+<body>
+  <div class="header">
+    <h1>Aplicación de Eventos Universitarios</h1>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-button" onclick="showTab('home')">Home</button>
+    <button class="tab-button" onclick="showTab('events')">Eventos</button>
+    <button class="tab-button" onclick="showTab('profile')">Perfil</button>
+  </div>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane">
+      <h2>Bienvenido a la Aplicación de Gestión de Eventos Universitarios</h2>
+      <p>Aquí podrás ver y gestionar todos los eventos universitarios.</p>
+    </div>
+    <div id="events" class="tab-pane" style="display:none;">
+      <h2>Eventos</h2>
+      <ul>
+        <li>Evento 1</li>
+        <li>Evento 2</li>
+        <li>Evento 3</li>
+      </ul>
+    </div>
+    <div id="profile" class="tab-pane" style="display:none;">
+      <h2>Perfil del Usuario</h2>
+      <p>Aquí puedes ver y editar tu perfil.</p>
+    </div>
+  </div>
+
+  <script src="tabs.component.ts"></script>
+</body>
+</html>
+
